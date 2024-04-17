@@ -19,7 +19,7 @@ let hisNum;
 
 //saving the input's value, making them lowercase (working)
 
-function gradeInput() {
+const gradeInput = () => {
     engLetter = engInput.value.toLowerCase();
     mathLetter = mathInput.value.toLowerCase();
     sciLetter = sciInput.value.toLowerCase();
@@ -32,7 +32,7 @@ function gradeInput() {
 };
 
 // converting the letter variables into numbers (working w/console.log)
-function convert(letter) {
+const convert = (letter) => {
     if (letter === "a") {
         return 4;
     } else if (letter === "b") {
@@ -50,7 +50,7 @@ function convert(letter) {
 
 // adding and gpa
 
-function calculate() {
+const calculate = () => {
     let gpa = (engNum + mathNum + sciNum + hisNum)/4;
     display.innerHTML= `Your GPA is ${gpa}`;
 };
