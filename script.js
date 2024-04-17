@@ -7,27 +7,31 @@ let button = document.querySelector("button");
 let display = document.querySelector(".display");
 
 // pre-declaring variables
-let engLetterGrade;
-let mathLetterGrade;
-let sciLetterGrade;
-let hisLetterGrade;
+let engLetter;
+let mathLetter;
+let sciLetter;
+let hisLetter;
+
+let engNum;
+let mathNum;
+let sciNum;
+let hisNum;
 
 //saving the input's value, making them lowercase (working)
 
 function gradeInput() {
-    engLetterGrade = engInput.value.toLowerCase();
-    mathLetterGrade = mathInput.value.toLowerCase();
-    sciLetterGrade = sciInput.value.toLowerCase();
-    hisLetterGrade = hisInput.value.toLowerCase();
+    engLetter = engInput.value.toLowerCase();
+    mathLetter = mathInput.value.toLowerCase();
+    sciLetter = sciInput.value.toLowerCase();
+    hisLetter = hisInput.value.toLowerCase();
 
-    // console.log(engLetterGrade);
-    // console.log(mathLetterGrade);
-    // console.log(sciLetterGrade);
-    // console.log(hisLetterGrade);
+    // console.log(engLetter);
+    // console.log(mathLetter);
+    // console.log(sciLetter);
+    // console.log(hisLetter);
 };
 
-// converting the letter variables into numbers, trying to work around return
-
+// converting the letter variables into numbers (working w/console.log)
 function convert(letter) {
     if (letter === "a") {
         return 4;
@@ -39,21 +43,25 @@ function convert(letter) {
         return 1;
     } else if (letter === "f") {
         return 0;
+    } else {
+        alert("Please enter your grades in correctly.")
     };
 };
 
 // adding and gpa
 
 function calculate() {
-    
+    let gpa = (engNum + mathNum + sciNum + hisNum)/4;
+    display.innerHTML= `Your GPA is ${gpa}`;
 };
 
-// button clicked, testing the convert function
+// button clicked, lowercasing letters (working), converting to num (working)
 
 button.onclick = function() {
     gradeInput();
-    convert(engLetterGrade);
-    convert(mathLetterGrade);
-    convert(sciLetterGrade);
-    convert(hisLetterGrade);
+    engNum = convert(engLetter);
+    mathNum = convert(mathLetter);
+    sciNum = convert(sciLetter);
+    hisNum = convert(hisLetter);
+    calculate();
 };

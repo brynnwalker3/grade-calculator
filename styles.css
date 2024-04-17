@@ -1,0 +1,38 @@
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    background-color: #00B4D8;
+    height: 50px;
+    color: whitesmoke;
+    font-size: 40px;
+}
+
+p {
+    font-size: large;
+    font-family: "Nunito", sans-serif;
+}
+
+input {
+    height: 25px;
+}
+
+button {
+    height: 50px;
+    margin-left: 4%;
+    font-size: large;
+    font-family: "Nunito", sans-serif;
+    background-color: #CAF0F8;
+    border: 3px solid #90E0EF;
+    border-radius: 10px;
+}
+
+.display {
+    margin-top: 15%;
+    text-align: center;
+    font-size: x-large;
+    font-family: "Nunito", sans-serif;
+}
