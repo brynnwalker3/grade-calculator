@@ -43,7 +43,7 @@ const convert = (letter) => {
         return 1;
     } else if (letter === "f") {
         return 0;
-    } else {
+    } else {   
         alert("Please enter your grades in correctly.")
     };
 };
